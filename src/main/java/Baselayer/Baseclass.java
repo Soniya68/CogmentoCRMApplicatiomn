@@ -13,7 +13,9 @@ public class Baseclass {
 	protected static  FileInputStream fis;
 	
 	public Baseclass() {
+		
 	  prop = new Properties();
+	  
 	 String path = System.getProperty("user.dir")+"/src/main/java/ConfigurationLayer/config.properties";
 	 try {
 		  fis = new FileInputStream(path);
@@ -26,7 +28,9 @@ public class Baseclass {
  }
 	
 	public static void initialization() {
-		 driver = new ChromeDriver();
+		//System.setProperty(webdriver.chrome.driver, "C:\\Users\\Mahesh B\\Desktop\\chromedriver-win64\\chromedriver.exe");
+		
+	 driver = new ChromeDriver();
 		 
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		 driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));

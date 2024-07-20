@@ -2,6 +2,7 @@ package Steps;
 
 import Baselayer.Baseclass;
 import PageLayer.LoginPage;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,5 +28,10 @@ public class LoginPageSteps extends Baseclass{
 	@Then("user click on login button")
 	public void user_click_on_login_button() {
 	  log.userClickOnLoginButton();
+	}
+	@AfterStep
+	public void teardown() throws InterruptedException
+	{
+		Thread.sleep(3000);
 	}
 }
