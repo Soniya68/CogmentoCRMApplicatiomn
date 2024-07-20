@@ -2,6 +2,8 @@ package Steps;
 
 import Baselayer.Baseclass;
 import PageLayer.contactPage;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class contactPageSteps extends Baseclass{
@@ -24,6 +26,16 @@ public void user_click_on_create_button() {
 public void user_enter_first_name_and_last_name() {
 	conPage.userEnterFirstNameAndLastName("Soniya", "Warse");
    
+}
+@When("user click on save button")
+public void user_click_on_save_button() {
+	conPage.userClickOnSaveButton();
+  
+}
+@Then("user click on delete and confirm delete")
+public void user_click_on_delete_and_confirm_delete() {
+	conPage.userClickOnDeleteAndConfirmelete();
+    
 }
 
 }

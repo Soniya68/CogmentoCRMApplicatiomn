@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import Baselayer.Baseclass;
 import UtilityLayer.Wait;
-import io.cucumber.java.en.When;
 
 public class contactPage extends Baseclass{
 	
@@ -21,6 +20,18 @@ public class contactPage extends Baseclass{
 	
 	@FindBy(name="last_name")
 	private WebElement lname;
+	
+	@FindBy(xpath="//button[text()='Save']")
+	private WebElement save;
+	
+	
+	@FindBy(xpath="//button[@class='ui button icon']")
+	private WebElement delete;
+	
+	
+	@FindBy(xpath="//button[text()='Delete']")
+	private WebElement cdelete;
+
 	
 	public contactPage()
 	{
@@ -45,6 +56,17 @@ public class contactPage extends Baseclass{
 		Wait.sendKeys(lname, Lname);
 	   
 	}
+	
+	public void userClickOnSaveButton() {
+		Wait.click(save);	    
+	}
+
+	public void userClickOnDeleteAndConfirmelete() {
+		Wait.click(delete);
+		Wait.click(cdelete);
+	  
+	}
+
 
 
 }

@@ -9,4 +9,6 @@ Feature: Test cogmneto Application
     When user click on contact link page
     When user click on create button
     And user enter first name and last name
-    
+    And user click on save button
+    Then user click on delete and confirm delete
+   
